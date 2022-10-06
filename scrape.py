@@ -21,7 +21,7 @@ def get_html(url):
     page = get(url)
     soup = BeautifulSoup(page.content, 'lxml')
     return soup
-    
+
 def load_data(soup, loc, tit, prc, lnk):
 
     offers = soup.find_all('div',{"class" : "offer-wrapper"})
